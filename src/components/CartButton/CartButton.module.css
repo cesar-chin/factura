@@ -1,0 +1,13 @@
+button {
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: xx-large;
+    height: fit-content;
+    width: fit-content;
+}
+
+button:hover {
+    color: #eee;
+    cursor: pointer;
+}
