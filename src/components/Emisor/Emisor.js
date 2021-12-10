@@ -4,13 +4,12 @@ export const Emisor = () => {
 
     return (
         
-        <>
-            <p>EMISOR</p>                    
-            <p>Identificación</p>    
-            <p>Dirección</p>                    
-            <p>Provincia, Cantón, Distrito</p>                    
-            <p>Teléfono</p>                    
-            <p>Correo</p>                                
+        <>                      
+            <p>Identificación: 107250245</p>    
+            <p>Dirección: Barrio Cordoba</p>                    
+            <p>San José, Central, Merced</p>                    
+            <p>Teléfono: 99998888</p>                    
+            <p>Correo: telas@gmail.com</p>                                
         </>
     )
 }

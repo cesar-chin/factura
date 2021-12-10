@@ -4,13 +4,12 @@ export const Encabezado = () => {
 
     return (
         
-        <>
-            <p>FACTURA</p>                    
-            <p>Identificación</p>                    
-            <p>Dirección</p>                    
-            <p>Provincia, Cantón, Distrito</p>                    
-            <p>Teléfono</p>                    
-            <p>Correo</p>                                
+        <>                
+            <p>Identificación: 19256555</p>                    
+            <p>Dirección: Occidente C4</p>                    
+            <p>Alajuela, Central, San José</p>                    
+            <p>Teléfono: 836254</p>                    
+            <p>Correo: chinchillamc@gmail.com</p>                                
         </>
     )
 }

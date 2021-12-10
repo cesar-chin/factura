@@ -1,44 +1,16 @@
 [
     {
-        "id": 1,
-        "name" : "Super Mario",
-        "platform" : "SNES",
-        "state" : true
+        "codigo": 1,
+        "descripcion" : "Camisa deportiva",
+        "cantidad" : "1",
+        "precio" : 2500,
+        "total" : 2500
     },
     {
-        "id": 2,
-        "name" : "Sonic the Hedgehog",
-        "platform" : "Sega",
-        "state" : false
-    },
-    {
-        "id": 3,
-        "name" : "Zelda: The ocarine of time",
-        "platform" : "N64",
-        "state" : true
-    },
-    {
-        "id": 4,
-        "name" : "Minecraft",
-        "platform" : "PC",
-        "state" : true
-    },
-    {
-        "id": 5,
-        "name" : "Zelda: The ocarine of time",
-        "platform" : "N64",
-        "state" : true
-    },
-    {
-        "id": 6,
-        "name" : "Pong",
-        "platform" : "Arcade",
-        "state" : true
-    },
-    {
-        "id": 7,
-        "name" : "Halo",
-        "platform" : "XBOX",
-        "state" : true
-    }
+        "codigo": 2,
+        "descripcion" : "Camisa casual",
+        "cantidad" : "2",
+        "precio" : 3500, 
+        "total" : 7000
+    }    
 ]

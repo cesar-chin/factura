@@ -1,8 +1,15 @@
 .Root {
-    background-color: #1b1c27;
+    background-color: #b6b6be;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-size: calc(10px + 2vmin);
-    color: #aaa;
+    font-size: calc(3px + 2vmin);
+    color: rgb(5, 0, 0);    
+  }
+
+  table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid rgb(245, 247, 248);    
   }

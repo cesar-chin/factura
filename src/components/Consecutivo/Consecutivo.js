@@ -5,7 +5,7 @@ export const Consecutvo = () => {
     return (
         
         <>            
-            <p>Factura #</p>        
+            <p>Factura #  99999999</p>        
         </> 
     )
 }
