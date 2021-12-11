@@ -1,6 +1,7 @@
 import React from 'react'
+import './Negocio.css'
 
-export const Vendedor = () => {
+export const Negocio = () => {
 
     return (
         

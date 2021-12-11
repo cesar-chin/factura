@@ -1,18 +1,20 @@
 import React from 'react'
-import { VerFacturaButton } from '../VerFacturaButton/VerFacturaButton'
-import { ConfigurarButton } from '../ConfigurarButton/ConfigurarButton'
-import { NuevaFacturaButton } from '../NuevaFacturaButton/NuevaFacturaButton'
-import { GuardarFacturaButton } from '../GuardadFacturaButton/GuardarFacturaButton'
-import { EnviarButton } from '../EnviarButton/EnviarButton'
+import { VerFacturaButton } from './VerFacturaButton'
+import { ConfigurarButton } from './ConfigurarButton'
+import { NuevaFacturaButton } from './NuevaFacturaButton'
+import { GuardarFacturaButton } from './GuardarFacturaButton'
+import { EnviarButton } from './EnviarButton'
+
+import './Panel.module.css'
 
 export const Panel = () => {
 
     return (
         
         <nav>
-                <EnviarButton/>
-                <GuardarFacturaButton/>
                 <NuevaFacturaButton/>
+                <GuardarFacturaButton/>
+                <EnviarButton />                                
                 <ConfigurarButton />
                 <VerFacturaButton />                
         </nav>        

@@ -1,16 +1,9 @@
-.Root {
-    background-color: #b6b6be;
+.Negocio {
+    background-color: #0f0fa0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-size: calc(1px + 2vmin);
+    font-size: calc(4px + 2vmin);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: rgb(5, 0, 0);    
-  }
-
-  table {
-    table-layout: fixed;
-    width: 100%;
-    border-collapse: inherit;
-    border: 1px solid rgb(245, 247, 248);    
   }

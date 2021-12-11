@@ -5,11 +5,9 @@ export const Encabezado = () => {
     return (
         
         <>                
-            <p>Identificación: 19256555</p>                    
-            <p>Dirección: Occidente C4</p>                    
-            <p>Alajuela, Central, San José</p>                    
-            <p>Teléfono: 836254</p>                    
-            <p>Correo: chinchillamc@gmail.com</p>                                
+            <p>Identificación <input type = {Text} size={15} /> Correo <input type = {Text} size={25} /> Teléfono <input type = {Text} size={15}/> </p>
+            <p>Dirección <input type = {Text} size={60} /></p> 
+            <p>Provincia <input type = {Text} size={15} /> Cantón <input type = {Text} size={15} /> Distrito <input type = {Text} size={15} /></p>                     
         </>
     )
 }

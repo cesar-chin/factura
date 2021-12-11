@@ -12,9 +12,9 @@ export const Linea = ({codigo, descripcion, cantidad, precio, total}) => {
      }
 
     return (
-        <li>
+        <li>            
             { <span className={ checked ? styles.checked : undefined }>
-                {`${codigo}. ${descripcion}. ${cantidad}. ${precio}. ${total} ` }
+                { `${codigo}. ${descripcion}. ${cantidad}. ${precio}. ${total} ` }
             </span> }
 
             { <input type="checkbox" onChange={(e) => checkOnHandler(e, codigo) } /> }
