@@ -1,9 +1,17 @@
 import React from 'react'
 
 export const VerFacturaButton = () => {
+    const sendMessage = () => {
+
+        alert('Muestra una factura existente');
+     
+    }
+     
     return (
-        <button style={{ minHeight: 5 }} >
-            Ver factura
+     
+        <button onClick={sendMessage}>
+           Ver factura
         </button>
-    ) 
+     
+       ); 
 }

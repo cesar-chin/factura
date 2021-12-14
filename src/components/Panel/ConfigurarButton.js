@@ -1,9 +1,17 @@
 import React from 'react'
 
 export const ConfigurarButton = () => {
+    const sendMessage = () => {
+
+        alert('Configura valores de factura');
+     
+    }
+     
     return (
-        <button style={{ minHeight: 5 }} >
-            Configurar
+     
+        <button onClick={sendMessage}>
+           Configurar
         </button>
-    ) 
+     
+       ); 
 }

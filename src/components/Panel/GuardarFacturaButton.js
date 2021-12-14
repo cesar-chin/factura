@@ -1,9 +1,18 @@
 import React from 'react'
 
 export const GuardarFacturaButton = () => {
+    
+    const sendMessage = () => {
+
+        alert('Crea un archivo XML con los datos de la factura');
+     
+    }
+     
     return (
-        <button style={{ minHeight: 5 }} >
-            Guardar
+     
+        <button onClick={sendMessage}>
+           Guardar
         </button>
-    ) 
+     
+       );
 }

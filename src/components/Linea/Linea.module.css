@@ -1,14 +1,18 @@
-li {
-    align-items: center;
-    border-bottom: 1px solid #ddd;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    list-style: none;
-    max-width: 75%;
-    min-height: 3rem;
+.hidden {
+    display: none;
 }
 
-.checked {
-    font-weight: bolder;
+.panel{
+    background-color: #28293d;
+    border: 3px solid #38394d;
+    font-size: medium;
+    height: 93.2vh;
+    position: absolute;
+    right: 0;
+    top: 4.5%;
+    width: 15%;
+}
+
+.showed {
+    display: initial;
 }

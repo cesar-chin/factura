@@ -5,10 +5,10 @@ export const Resumen = () => {
     return (
         
         <>                
-            <p>Subtotal: 9500</p>                    
-            <p>Impuesto: 1235</p>                    
-            <p>Descuento: 0</p>                    
-            <p>Total: 10735</p>                                             
+            <tr><td>Subtotal</td><td><input type="text"></input></td></tr>                    
+            <tr><td>Impuesto</td><td><input type="text"></input></td></tr>               
+            <tr><td>Descuento</td><td><input type="text"></input></td></tr>   
+            <tr><td>total</td><td><input type="text"></input></td></tr>                                       
         </>
     )
 }

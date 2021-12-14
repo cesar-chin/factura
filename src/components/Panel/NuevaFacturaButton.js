@@ -1,9 +1,17 @@
 import React from 'react'
 
 export const NuevaFacturaButton = () => {
+    const sendMessage = () => {
+
+        alert('Crea una nueva factura');
+     
+    }
+     
     return (
-        <button style={{ minHeight: 5 }} >
-            Nueva
+     
+        <button onClick={sendMessage}>
+           Nueva
         </button>
-    ) 
+     
+       ); 
 }
