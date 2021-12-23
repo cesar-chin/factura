@@ -1,23 +1,26 @@
 import React from 'react'
-import { VerFacturaButton } from './VerFacturaButton'
-import { ConfigurarButton } from './ConfigurarButton'
-import { NuevaFacturaButton } from './NuevaFacturaButton'
-import { GuardarFacturaButton } from './GuardarFacturaButton'
-import { EnviarButton } from './EnviarButton'
-
-import './Panel.module.css'
 
 export const Panel = () => {
 
+    const sendMessage = () => {
+
+        alert('Ejecuta acción !');
+     
+    }
+
     return (
         
-        <nav>
-                <NuevaFacturaButton/>
-                <GuardarFacturaButton/>
-                <EnviarButton />                                
-                <ConfigurarButton />
-                <VerFacturaButton />                
-        </nav>        
+        <>                         
+             <tr>
+                 <td><button onClick={sendMessage} class="btn btn-secondary inactive" > Configurar </button></td>
+                 <td><button onClick={sendMessage} class="btn btn-secondary inactive"> Nueva </button></td>
+                 <td><button onClick={sendMessage} class="btn btn-secondary inactive"> Guardar </button></td>    
+                 <td><button onClick={sendMessage} class="btn btn-secondary inactive"> Enviar </button></td>    
+                 <td><button onClick={sendMessage} class="btn btn-secondary inactive"> Ver factura </button></td>            
+             </tr>             
+                                 
+        </>        
+        
 
     )
 }

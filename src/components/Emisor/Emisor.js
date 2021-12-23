@@ -2,14 +2,13 @@ import React from 'react'
 
 export const Emisor = () => {
 
-    return (
-        
+    return (        
         <>                      
-            <p>Identificación: 107250245</p>    
-            <p>Dirección: Barrio Cordoba</p>                    
-            <p>San José, Central, Merced</p>                    
-            <p>Teléfono: 99998888</p>                    
-            <p>Correo: telas@gmail.com</p>                                
+            <tr><td>Identificación:<input type = {Text} size={3} value= '3-101-362214'  size = '15' /> </td></tr>
+            <tr><td>Dirección:<input type = {Text} size={3} value= 'San José, Central, Merced, Dirección: Barrio Cordoba'  size = '45'  /> </td></tr>
+            <tr><td>Teléfono:<input type = {Text} size={3} value= '99998888'  size = '15'  /> </td></tr>
+            <tr><td>Correo:<input type = {Text} size={3} value= 'telas@gmail.com'  size = '25' /> </td></tr>
+            <tr><td>Dirección:<input type = {Text} size={3} value= 'San José, Central, Merced, Dirección: Barrio Cordoba'  size = '45'  /> </td></tr>                        
         </>
     )
 }

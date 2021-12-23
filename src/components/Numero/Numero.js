@@ -1,11 +1,11 @@
 import React from 'react'
 
-export const Consecutvo = () => {
+export const Numero = () => {
 
     return (
         
         <>            
-            <p>Factura #  99999999</p>        
+            Factura # 9999999        
         </> 
     )
 }

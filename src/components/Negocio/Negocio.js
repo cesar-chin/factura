@@ -1,12 +1,12 @@
 import React from 'react'
-import './Negocio.css'
 
 export const Negocio = () => {
 
     return (
         
         <>
-            <p>Telas Cofección</p>                    
+            <h3>Telas Cofección</h3>
+            <h4>Diseño es pasión y perfección!</h4>
         </>
     )
 }

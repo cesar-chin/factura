@@ -1,5 +1,5 @@
 .Root {
-    background-color: #b6b6be;
+    background-color: #dadae4;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -8,9 +8,3 @@
     color: rgb(5, 0, 0);    
   }
 
-  table {
-    table-layout: fixed;
-    width: 100%;
-    border-collapse: inherit;
-    border: 1px solid rgb(245, 247, 248);    
-  }

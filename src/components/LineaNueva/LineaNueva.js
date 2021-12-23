@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import styles from './LineaNueva.module.css'
 
 export const LineaNueva = () => {
 

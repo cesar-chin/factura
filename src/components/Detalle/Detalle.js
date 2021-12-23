@@ -1,102 +1,149 @@
+
+
 import React from 'react';
 
 export default class Detalle extends React.Component {
-  constructor(props) {
-    super(props);
+  state = {
+    filas: []
+  };
 
-    this.state = {
-      message: "",
-      items: []
-    }
-  }
+  handleChange = idx => e => {
 
-  updateValues(event) {
+
+    // if(e.target.name ==="cantidad" ){
+    //     cant = e.target.valor
+    // }
+    
+    // if(e.target.name ==="precio"){
+    //   prec = e.target.valor
+    // }
+    
+    const { 
+      nombre, valor 
+    } = e.target;
+    
+    const filas = [...this.state.filas];
+
+    filas[idx] = {
+
+      [nombre]: valor
+    };
+
+  
+    
     this.setState({
-      message: event.target.value
+      filas
     });
-    alert(event.target.value)
-  }
 
-  handleClick() { 
-    var items = this.state.items;
-    items.push(this.state.message);
+  };
+  
+  handleAddRow = () => {
+    const item = {
+      codigo: "",
+      descripcion: "",
+      cantidad:0,
+      precio:0,
+      total: 0
+    };
     this.setState({
-      items: items,
-      message: ""
-    });
-  }
 
-  handleItemChanged(i, event) {
-    var items = this.state.items;
-    items[i]  = event.target.value;
-    this.setState({ 
-      items: items
+      filas: [...this.state.filas, item]
     });
-  }
-
-  handleItemDeleted(i) {
-    var items = this.state.items;
-    items.splice(i, 1);
+  };
+  
+  handleRemoveRow = () => {
     this.setState({
-      items: items
+      filas: this.state.filas.slice(0, -1)
     });
-  }
-
-  renderRows() {
-    var context = this;
-    return  this.state.items.map(function(o, i) {
-        return (
-            <tr key={"item-" + i}>
-                  <td> <input type="text" value={o}/></td>
-                  <td><input type="text" value={o}/></td>
-                  <td><input type="text" value={o}/></td>
-                  <td> <input type="text" value={o}/></td>
-                  <td><input type="text" value={o} /></td>
-                  <td>
-                    <button  onClick={context.handleItemDeleted.bind(context, i)}>
-                      Eliminar
-                    </button>
-                  </td>
-                </tr>
-              );
-            });
-  }
-
-
+  };
   render() {
     return (
       <div>
-         
-        <table className="">
-          <thead>
-            <tr>
-              <td>Código</td>
-              <td>Descripción</td>
-              <td>Cantidad</td>
-              <td>Precio</td>
-              <td>Total</td>
-              <td></td>
-            </tr>
-            <tr>
-             <td> <input type="text" value={this.state.message} onChange={this.updateValues.bind(this)} /> </td>
-        <td> <input type="text" value={this.state.message} onChange={this.updateValues.bind(this)} /> </td>
-        <td>  <input type="text" value={this.state.message} onChange={this.updateValues.bind(this)} /> </td>
-        <td><input type="text" value={this.state.message} onChange={this.updateValues.bind(this)} /></td>
-        <td><input type="text" value={this.state.message}  /></td>
-        <td>
-            <button onClick={this.handleClick.bind(this)} >            
+        <div className="container">
+          <div className="row clearfix">
+            <div className="col-md-12 column">
+              <table
+                className="table table-bordered table-hover"
+                id="tab_logic"
+              >
+                <thead>
+                  <tr>
+                    <th className="text-center"> Línea </th>
+                    <th className="text-center"> Código </th>
+                    <th className="text-center"> Descripción </th>
+                    <th className="text-center"> Cantidad </th>
+                    <th className="text-center"> Precio </th>
+                    <th className="text-center"> Total </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.state.filas.map((item, idx) => (
+                    <tr id="addr0" key={idx}>
+                      <td>{idx}</td>
+                      <td>
+                        <input
+                          type="text"
+                          name="name"
+                          value={this.state.filas[idx].codigo}
+                          onChange={this.handleChange(idx)}
+                        />
+                      </td>
+                      <td> 
+                        <input
+                          type="text"
+                          name="descripcion"
+                          value={this.state.filas[idx].descripcion}                          
+                          onChange={this.handleChange(idx)}
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          name="cantidad"
+                          value={this.state.filas[idx].cantidad}
+                          onChange={this.handleChange(idx)}
+                          
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          name="precio"
+                          value={this.state.filas[idx].precio}
+                          onChange={this.handleChange(idx)}
+                          
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          name="total"
+                          value={this.state.filas[idx].total}
+                          onChange={this.handleChange(idx)}
+                          
+                        />
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <button
+                onClick={this.handleAddRow}
+                className="btn btn-default pull-left"
+              >
                 Agrega línea
-            </button>
-        </td>
-        </tr>
-          </thead>
-          <tbody>
-            {this.renderRows()}
-          </tbody>
-        </table>
-        <hr/>
-        
+              </button>
+              <button
+                onClick={this.handleRemoveRow}
+                className="pull-right btn btn-default"
+              >
+                Elimina línea
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
 }
+
