@@ -1,8 +1,10 @@
 import React from 'react'
+import Formulario from './Formulario/Formulario';
+import Resultado from './Resultado/Resultado';
 
-export const Panel = () => {
+const Panel = () => {
 
-    const sendMessage = () => {
+    const sendMessage = () => { 
 
         alert('Ejecuta acción !');
      
@@ -11,16 +13,17 @@ export const Panel = () => {
     return (
         
         <>                         
-             <tr>
-                 <td><button onClick={sendMessage} class="btn btn-secondary inactive" > Configurar </button></td>
-                 <td><button onClick={sendMessage} class="btn btn-secondary inactive"> Nueva </button></td>
-                 <td><button onClick={sendMessage} class="btn btn-secondary inactive"> Guardar </button></td>    
-                 <td><button onClick={sendMessage} class="btn btn-secondary inactive"> Enviar </button></td>    
-                 <td><button onClick={sendMessage} class="btn btn-secondary inactive"> Ver factura </button></td>            
-             </tr>             
+             <div>                 
+                 <button onClick={sendMessage} class="btn btn-secondary inactive"> Facturas procesadas </button>
+                 <p></p>    
+                 <Formulario/>       
+                 <p></p>    
+                 <Resultado/>           
+             </div>             
                                  
         </>        
         
-
     )
 }
+
+export default Panel;

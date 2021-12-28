@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Negocio = () => {
+const Negocio = () => {
 
     return (
         
@@ -10,3 +10,5 @@ export const Negocio = () => {
         </>
     )
 }
+
+export default Negocio;

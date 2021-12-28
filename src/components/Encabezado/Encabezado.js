@@ -1,18 +1,26 @@
-import React, { useState, useRef, useReducer } from 'react';
+
+
+import React, { useState, useRef } from 'react';
 import {useHookHttp} from './useHookHttp/useHookHttp';
+import {useHookData} from './useHookData/useHookData';
 import actualizarResultado from './Resultado/actions'
 import { connect } from 'react-redux';
 
-export const Encabezado = ({actualizarResultado}) => {
-    const [id, setId] = useState(0);    
+import { Formik, Field, Form } from 'formik';
+
+export const Encabezado = () => {
+
     
-    const [cliente] = useHookHttp(`http://localhost:3002/${id}`);
+    const [id, setId] = useState(1);    
+    
+    //const [cliente] = useHookHttp(`http://localhost:3002/${id}`);
+    const [cliente] = useHookData(`${id}`);
 
     const resultadoRef = useRef(null);
 
     const manejarBusqueda = () => {
                                
-        setId(resultadoRef.current.value);          
+        setId(resultadoRef.current.value);      
     }
 
     const manejarAgregar = () => {
@@ -22,34 +30,69 @@ export const Encabezado = ({actualizarResultado}) => {
 
     return (
         <div>
-            <table>
+            
 
-            <tr>
-                  <td>
-                  <button onClick={manejarBusqueda}>Buscar por código</button> 
-                  <input type = {Text} size={15} ref={resultadoRef} />
-                  {/* <button onClick={manejarAgregar}>Agregar</button> */}
-                  </td>
-                  </tr>  
-                  
-                 <tr>
-                    <td>Código <input type = {Text} size={15} value={cliente.id}/></td>
-                 </tr>
-                 <tr>
-                      <td>Identificación <input type = {Text} size={15} value={cliente.identificacion}/></td>
-                 </tr>
-                 <tr>
-                  <td>Nombre <input type = {Text} size={25} value={cliente.nombre}/></td>
-                 </tr>                
-                  <tr>
-                      <td>Teléfono <input type = {Text} size={15} value={cliente.telefono}/></td> 
-                      </tr>
-                 <tr>    
-                      <td>Correo <input type = {Text} size={15} value={cliente.correo}/></td>
-                  </tr> 
-                                 
-                 </table>                  
+                 <Formik
+                initialValues={{  
+                    id: '',
+                    identificaion:'',
+                    nombre: '',
+                    correo: '',
+                    telefono:''
+                }}
+                onSubmit={manejarBusqueda}
+                >
+                <Form>
+                 <table>
+                     <tr>
+                         <td>
+                             <input type = {Text} size={15} ref={resultadoRef} type="text" size="1" maxLength={1}
+                             pattern="[1-5]*"/>
+                             <button type="submit">Buscar por código</button>
+                         </td>
+                     </tr>
+
+                     <tr>
+                         <td>
+                            <label htmlFor="codigo">Código</label>
+                            <Field id="codigo" name="codigo" placeholder="" type = "number" value={cliente.id}/>
+                         </td>                         
+                     </tr>
+                     <tr>
+                         <td>
+                         <label htmlFor="identificacion">Identificación</label>
+                    <Field id="identificacion" name="identificacion" placeholder=""  value={cliente.identificacion}/>
+                         </td>                         
+                     </tr>
+
+                     <tr>
+                         <td>
+                         <label htmlFor="nombre">Nombre</label>
+                    <Field id="nombre" name="nombre" placeholder="" value={cliente.nombre}  />
+                         </td>                         
+                     </tr>
+
+                     <tr>
+                         <td>
+                         <label htmlFor="telefono">Teléfono</label>
+                    <Field id="telefono" name="telefono" placeholder="" value={cliente.telefono} />
+                         </td>                         
+                     </tr>
+                     
+                     <tr>
+                         <td>
+                         <label htmlFor="correo">Correo</label>
+                    <Field  id="correo" name="correo"  type="email" value={cliente.correo} />
+                         </td>                          
+                     </tr>
+                 </table>
+                                    
+                </Form>
+                </Formik>             
         </div>
+
+            
+
     )
 }
 

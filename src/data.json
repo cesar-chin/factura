@@ -1,16 +1,22 @@
 [
     {
-        "codigo": 1,
-        "descripcion" : "Camisa deportiva",
-        "cantidad" : "1",
-        "precio" : 2500,
-        "total" : 2500
+        "id": 1,
+        "name" : "Tipo de cliente",
+        "descripcion": "Pyme"
     },
     {
-        "codigo": 2,
-        "descripcion" : "Camisa casual",
-        "cantidad" : "2",
-        "precio" : 3500, 
-        "total" : 7000
-    }    
+        "id": 2,
+        "name" : "Forma de pago",
+        "descripcion": "Contado"
+    },
+    {
+        "id": 3,
+        "name" : "CaBys",
+        "descripcion": "0000000000999874"
+    },
+    {
+        "id": 4,
+        "name" : "Plazo",
+        "descripcion": "Contado"
+    }
 ]

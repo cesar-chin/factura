@@ -1,0 +1,39 @@
+
+[
+    {
+        "id": 1,
+        "nombre": "Cesar Chinchilla M",
+        "identificacion": "109590466",
+        "correo": "correo@gmail.com",
+        "telefono" : "66778899"
+    },
+    {
+        "id": 2,
+        "nombre": "Empresas El Sol S.A",
+        "identificacion": "3101234521",
+        "correo": "correo@gmail.com",
+        "telefono" : "66778899"
+    },
+    {
+        "id": 3,
+        "nombre": "Diario Sol",
+        "identificacion": "3101214521",
+        "correo": "algo@gmail.com",
+        "telefono" : "66778899"
+    },
+    {
+        "id": 4,
+        "nombre": "Escuela Del Sur",
+        "identificacion": "3101365214",
+        "correo": "escuela@algo.com", 
+        "telefono" : "66778899"
+    },
+    {
+        "id": 5,
+        "nombre": "Carlos Rojas",
+        "identificacion": "12563654",
+        "correo": "algo@gmail.com", 
+        "telefono" : "55554444"
+    }
+    
+]

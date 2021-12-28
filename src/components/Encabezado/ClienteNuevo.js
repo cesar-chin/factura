@@ -26,8 +26,11 @@ export const ClienteNuevo = () => (
 
         <label htmlFor="nombre">Nombre</label>
         <Field id="nombre" name="nombre" placeholder=""  />
+        
+        <label htmlFor="telefono">Teléfono</label>
+        <Field id="telefono" name="telefono" placeholder=""  />
 
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email">Correo</label>
         <Field
           id="email"
           name="email"

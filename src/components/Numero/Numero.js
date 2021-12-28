@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Numero = () => {
+const Numero = () => {
 
     return (
         
@@ -9,3 +9,5 @@ export const Numero = () => {
         </> 
     )
 }
+
+export default Numero;
