@@ -1,5 +1,3 @@
-
-
 import React, { useState, useRef } from 'react';
 import {useHookHttp} from './useHookHttp/useHookHttp';
 import {useHookData} from './useHookData/useHookData';
@@ -29,9 +27,7 @@ export const Encabezado = () => {
     }
 
     return (
-        <div>
-            
-
+        <div>            
                  <Formik
                 initialValues={{  
                     id: '',

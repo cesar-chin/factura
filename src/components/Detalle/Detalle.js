@@ -3,20 +3,17 @@
 import React from 'react';
 
 export default class Detalle extends React.Component {
+  
+  
+  
   state = {
-    filas: []
+    filas: [], cant:0
   };
 
   handleChange = idx => e => {
 
 
-    // if(e.target.name ==="cantidad" ){
-    //     cant = e.target.valor
-    // }
-    
-    // if(e.target.name ==="precio"){
-    //   prec = e.target.valor
-    // }
+    //alert ('al iniciar el total es ' + totall)
     
     const { 
       nombre, valor 
@@ -29,18 +26,31 @@ export default class Detalle extends React.Component {
       [nombre]: valor
     };
 
-  
     
     this.setState({
-      filas
+      filas, 
     });
+
+    if(e.target.name ==="cantidad" ){
+       
+      alert('Cantidad es '+ e.target.value)
+     // alert (cant)
+    }
+
+    if(e.target.name ==="precio" ){
+      
+      alert ('Precio es ' + e.target.value ) 
+    }
+
+    //totall = cant * 10
+    //alert ('al ingresar el total es ' + totall)
 
   };
   
   handleAddRow = () => {
     const item = {
       codigo: "",
-      descripcion: "",
+      descripcion: "", 
       cantidad:0,
       precio:0,
       total: 0
@@ -83,7 +93,7 @@ export default class Detalle extends React.Component {
                       <td>
                         <input
                           type="text"
-                          name="name"
+                          name="codigo"
                           value={this.state.filas[idx].codigo}
                           onChange={this.handleChange(idx)}
                         />

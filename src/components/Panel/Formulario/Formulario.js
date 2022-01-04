@@ -4,11 +4,18 @@ import { connect } from 'react-redux';
 
 const Formulario = ({actualizarResultado}) => {  
        const resultadoRef = useRef(null);
+       
+       
        const onButtonClick = () => {
          
-         actualizarResultado(resultadoRef.current.value);
+          alert ('Ejecuta la acción ' + resultadoRef.current.value) 
+
+          actualizarResultado(resultadoRef.current.value);
+
          
        }
+
+
         return (
           <div>               
             {/* <input type="text" ref={resultadoRef} /> */}

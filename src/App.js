@@ -1,11 +1,9 @@
 import Numero from './components/Numero/Numero';
 import { Encabezado } from './components/Encabezado/Encabezado';
-import { Resumen } from './components/Resumen/Resumen';
-import Detalle from './components/Detalle/Detalle';
+import Detalle2 from './components/Detalle/Detalle2';
 import {ClienteNuevo} from './components/Encabezado/ClienteNuevo';
 import Negocio from './components/Negocio/Negocio';
 import Panel from './components/Panel/Panel';
-//import PieDePagina from './Components/PieDePagina';
 import ValoresConfiguracion from "./components/ValoresConfiguracion";
 import { Emisor } from './components/Emisor/Emisor';
 import Logo from './logo.png';
@@ -42,8 +40,7 @@ const App = () => {
                   { <tr><td><Encabezado /></td></tr> }
                   { <tr><td><ClienteNuevo/></td></tr>            }
                   { <tr><td><h4>DETALLE</h4></td></tr>           }
-                  { <tr><td><Detalle/></td></tr>           }
-                  { <tr><td><Resumen /></td></tr>    }
+                  { <tr><td><Detalle2/></td></tr>           }
                          
                 </table>             
         </div>
